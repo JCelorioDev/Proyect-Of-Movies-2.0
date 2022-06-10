@@ -1,0 +1,11 @@
+<form action="" class="Form">
+    <input type="search" #Autor value="Johnny Depp">
+    <button type="button" (click)="getMoviesForAuthor(Autor)">Buscar</button>
+</form>
+<div *ngFor="let Item of Autores" class="Autor">
+    <h1>{{Item.name}}</h1>
+    <img width="200px" height="200px" src="https://image.tmdb.org/t/p/original/{{Item.profile_path}}" class="Autor__img" alt="No Imagen">
+    <div *ngFor="let Item of Peliculas">
+        {{Item.title}}
+    </div>
+</div>

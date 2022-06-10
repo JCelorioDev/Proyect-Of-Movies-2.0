@@ -1,0 +1,57 @@
+.Buscador{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.Buscador__input{
+    width: 300px;
+    background-color: rgb(253, 212, 212);
+}
+
+.Buscador__button{
+    margin: 0 10px;
+}
+
+.modal-body__titlegeneros{
+    display: inline-block;
+}
+
+.badge{
+    display: inline-block;
+}
+
+.card{
+    margin: 5px;
+    position: relative;
+    left: 400px;
+}
+
+.modal-title{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.modal-body__title{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+.modal-body__texto{
+    margin: 10px 0;
+    font-family: 'Handlee', cursive;
+    font-weight: 900;
+}
+
+.modal-body__img{
+    position: relative;
+    border-radius: 80%;
+    left: 150px;
+    -webkit-border-radius: 80%;
+    -moz-border-radius: 80%;
+    -ms-border-radius: 80%;
+    -o-border-radius: 80%;
+}
+
+.modal-body__link{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    text-decoration: none;
+    position: relative;
+    top: 10px;
+}

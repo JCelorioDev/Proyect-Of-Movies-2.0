@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+</head>
+<body>
+  <form action="" class="Buscador">
+    <input class="Buscador__input"  type="search" #Name value="Aquaman 2">
+    <button (click)="GetMoviesForNombre(Name)" type="button" class="btn btn-secondary Buscador__button">Buscar</button>
+  </form>
+  <div (click)="GetDetailsForMovies(Item.id)" *ngFor="let Item of Peliculas" class="container" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <div class="card" style="width: 18rem;">
+      <img width="150px" height="150px" src="https://image.tmdb.org/t/p/original/{{Item.poster_path}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><h2>{{Item.title}}</h2></h5>
+        <a class="btn btn-primary">Ver</a>
+      </div>
+    </div>
+    <br>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detalle de la Pelicula</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <h2 class="modal-body__title">{{Detalle.title}}</h2><br>
+         <img class="modal-body__img" width="200px" height="200px" src="https://image.tmdb.org/t/p/original/{{Detalle.backdrop_path}}" alt="">
+         <br>
+         <p class="modal-body__texto">
+          {{Detalle.overview}}
+         </p>
+        <span style="color: red; font-family: 'Kdam Thmor Pro', sans-serif;">Idioma: <span style="color: rgb(255, 157, 0);">{{Detalle.original_language}}</span></span>
+        <br>
+        <span class="modal-body__titlegeneros" style="color: blue; font-family: 'Kdam Thmor Pro', sans-serif;">Generos</span>
+        <div *ngFor="let Item of Generos">
+          <span class="badge bg-danger">{{Item.name}}</span>
+        </div>
+        <a href="{{Detalle.homepage}}" target="_blank" class="modal-body__link">Ver Más</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+.Form{
+    text-align: center;
+}
+
+.Autor{
+    text-align: center;
+    margin: 15px 0;
+}
+
+.Autor__img:hover{
+    transform: scale(110%);
+    -webkit-transform: scale(110%);
+    -moz-transform: scale(110%);
+    -ms-transform: scale(110%);
+    -o-transform: scale(110%);
+}

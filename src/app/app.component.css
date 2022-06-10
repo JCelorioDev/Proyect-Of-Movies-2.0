@@ -1,0 +1,6 @@
+.Encabezado{
+    border: rgb(0, 255, 255) solid 3px;
+}
+.Encabezado:hover{
+    border: rgb(234, 255, 0) solid 3px;
+}
